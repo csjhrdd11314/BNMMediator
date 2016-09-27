@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BNMMediator"
-  s.version          = "0.0.2"
+  s.version          = "0.0.3"
   s.summary          = "BNMMediator."
   s.description      = <<-DESC
                         This pod provides a solution of modularization which is lightweight and efficient;.
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.homepage         = "http://www.baidu.com"
    s.license          = { :type => "MIT", :file => "LICENSE" }
   s.author           = "chenshuijin@baidu.com"
-  s.source           = { :git => "https://github.com/csjhrdd11314/BNMMediator.git", :tag => "0.0.2" }
+  s.source           = { :git => "https://github.com/csjhrdd11314/BNMMediator.git", :tag => "0.0.3" }
   s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.public_header_files = "**/*.h"
