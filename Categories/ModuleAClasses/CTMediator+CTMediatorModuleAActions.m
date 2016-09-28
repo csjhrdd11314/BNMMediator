@@ -38,10 +38,12 @@ NSString * const kCTMediatorActionShowAlert = @"showAlert";
                      action:kCTMediatorActionNativePresentImage
                      params:@{@"image":image}];
     } else {
-        // 这里处理image为nil的场景，如何处理取决于产品
+        NSBundle *imageBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"ModuleAResources" ofType:@"bundle"]];
+        NSString *resourcePath = [imageBundle resourcePath];
+         NSString *fullPath = [resourcePath stringByAppendingPathComponent:@"noImage"];
         [self performTarget:kCTMediatorTargetA
                      action:kCTMediatorActionNativeNoImage
-                     params:@{@"image":[UIImage imageNamed:@"noImage"]}];
+                     params:@{@"image":[UIImage imageWithContentsOfFile:fullPath]}];
     }
 }
 
